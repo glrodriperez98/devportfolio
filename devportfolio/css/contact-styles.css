@@ -1,0 +1,161 @@
+.contact {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25;
+}
+
+.contact-heading {
+  text-align: center;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #D67976;
+  border-radius: 5px;
+  background-color: #282828;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 200px;
+  resize: vertical;
+}
+
+.contact-form input {
+  height: 40px;
+}
+
+.contact-form button {
+  align-self: flex-end;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 24px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid #D67976;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.7s ease-in-out, background-color 0.7s ease-in-out;
+}
+
+.contact-form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #D67976;
+  z-index: -1;
+  transition: width 0.12s ease-out;
+}
+
+.contact-form button:hover::before {
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #D67976;
+  color: black;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: #282828;
+  padding: 30px 0;
+  position: relative;
+}
+
+.return-home-container {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.return-home {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.return-home-box {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  fill: transparent;
+  stroke: #D67976;
+  stroke-width: 3;
+  transition: fill 0.4s ease-in-out;
+}
+
+.home-icon {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  position: absolute;
+  z-index: 1;
+  transition: fill 0.3s ease-in-out;
+}
+
+.return-home:hover .return-home-box {
+  fill: #D67976;
+}
+
+.return-home:hover .home-icon {
+  fill: #D67976;
+}
+
+.return-home:hover {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.social-media .icon {
+  width: 40px;
+  height: 40px;
+  fill: #fff;
+  transition: fill 0.3s ease;
+}
+
+.social-media .icon:hover {
+  fill: #D67976;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #fff;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}

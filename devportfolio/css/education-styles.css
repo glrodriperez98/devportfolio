@@ -1,0 +1,104 @@
+.education {
+  position: relative;
+  min-height: 70vh;
+  padding: 80px 40px;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.education-heading {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.education-container-left,
+.education-container-right {
+  width: 48%;
+}
+
+.education-container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 40px;
+}
+
+.education-container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 40px;
+}
+
+.education1, .education2,
+.certificate1, .certificate2, .certificate3 {
+  max-width: 100%;
+}
+
+.education > .education-container-left,
+.education > .education-container-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.education-row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #D67976;
+  transform: translateX(-50%);
+}
+
+.school-name, .certificate-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.degree, .institution {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .education-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education-row::before {
+    display: none;
+  }
+
+  .education-container-left,
+  .education-container-right {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
